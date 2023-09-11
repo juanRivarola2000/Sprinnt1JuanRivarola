@@ -67,9 +67,40 @@ header {
 }
 .containerhome {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    margin: 2rem;
+
 }
 .containerMain {
     display: flex;
     justify-content: space-around;
 }
+.card-img-top {
+    height: 12rem;
+}
+.containerContact {
+    width: 20rem;
+}
+.container-categories {
+    border-color: brown;
+}
+
+
+@media only screen and  ( max-width: 520px) {
+    .logo {
+        width: 10rem;
+    }    
+    .imghome {
+        margin-left: 3rem;
+        width: 15rem;
+    }
+    .containerhome {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .containerMain {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
