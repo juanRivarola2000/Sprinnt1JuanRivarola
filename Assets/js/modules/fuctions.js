@@ -11,9 +11,7 @@ export const filterCardsUpComingEvents = (data, currentDate) => {
     return data.filter(card => card.date < currentDate);
 };
 export const filtroDeCard = (data, upComingEvents) => {
-    console.log(upComingEvents, 'ACA ESTOY');
     const filteredCard = upComingEvents ? filterCards(data.events, data.currentDate) : filterCardsUpComingEvents(data.events, data.currentDate);
-    console.log(filteredCard, 'filteredCard');
     const estructura = crearTemplate(filteredCard);
     imprimirCards(estructura, 'containerCards');
     return filteredCard;
@@ -21,20 +19,17 @@ export const filtroDeCard = (data, upComingEvents) => {
 
 export const filtersBySearchInput = name => {
     const filteredEvents = filterCards(data.events, data.currentDate);
-    console.log(name, 'nombresss');
     const infoEvents = !filteredEvents.length ? filteredCard : filteredEvents;
     return infoEvents.filter(evento => {
-        console.log(evento.name, 'eventos. name');
         return evento.name.toLocaleLowerCase().startsWith(name);
     });
 };
 
 export const filtrarEventos = data => {
-    console.log(data, 'datasa');
     const eventosFiltrados = data?.filter(eventos => {
         return categoriasSeleccionadas.includes(eventos.category);
     });
-    console.log(eventosFiltrados, 'eventos que son filtrados');
+
     const estructuraFiltrada = crearTemplate(!eventosFiltrados.length ? data : eventosFiltrados);
     imprimirCards(estructuraFiltrada, 'containerCards');
     return eventosFiltrados;
@@ -50,21 +45,17 @@ export const selectedCheck = (checkbox, category, eventos) => {
             if (index !== -1) {
                 categoriasSeleccionadas.splice(index, 1);
             }
-            console.log(selectedCheck);
         }
-        console.log(eventos, 'los evento0s');
         return filtrarEventos(eventos);
     });
 };
 
 const categories = document.getElementById('categories');
 export const insertarCategorias = eventos => {
-    console.log(eventos, 'eventos asdasdasd');
     const allCategories = filtrarCategoriasRepetidas(eventos);
     allCategories.forEach(category => {
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        console.log(eventos, 'los eventos categoricos');
         selectedCheck(checkbox, category, eventos);
         const label = document.createElement('label');
         label.classList.add('m-3');
@@ -89,7 +80,6 @@ export function crearCard(x) {
 }
 
 export function crearTemplate(listEvents) {
-    console.log(listEvents, 'listEvents');
     let template = '';
     if (listEvents) {
         for (const event of listEvents) {
