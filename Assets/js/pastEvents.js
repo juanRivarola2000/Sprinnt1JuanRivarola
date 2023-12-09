@@ -4,8 +4,6 @@ const ContenedorCards = document.getElementById('containerCards');
 
 const URL_API = 'https://mindhub-xj03.onrender.com/api/amazing';
 
-// sacar del fetch las declaraciones de las funciones
-// los llamados tienen que estar dentro el then
 const getData = () => {
     const response = fetch(URL_API)
         .then(response => response.json())

@@ -4,8 +4,6 @@ const ContenedorCards = document.getElementById('containerCards');
 
 const URL_API = 'https://mindhub-xj03.onrender.com/api/amazing';
 
-// sacar del fetch las declaraciones de las funciones
-// los llamados tienen que estar dentro el then
 const getData = () => {
     const response = fetch(URL_API)
         .then(response => response.json())
@@ -13,9 +11,8 @@ const getData = () => {
     return response;
 };
 
-const response = await getData();
-
-search(response?.events);
+const eventsData = await getData();
+search(eventsData?.events);
 const upComingEvents = true;
-const filtroData = filtroDeCard(response, upComingEvents);
+const filtroData = filtroDeCard(eventsData, upComingEvents);
 insertarCategorias(filtroData);

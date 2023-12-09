@@ -6,6 +6,7 @@ const tabla1 = document.getElementById('tabla1');
 const tableUpcomingEventsStatistics = document.getElementById('upcomingEventsStatistics');
 const tdCategories = document.getElementById('categories');
 const URL_API = 'https://mindhub-xj03.onrender.com/api/amazing';
+
 const getData = () => {
     const response = fetch(URL_API)
         .then(response => response.json())
@@ -20,7 +21,6 @@ const insertarFilas = (id, fila) => {
 };
 
 const eventosPorcentaje = [];
-
 const calcularPorcentaje = eventos => {
     eventos.forEach((evento, index) => {
         if (evento.assistance) {
@@ -45,7 +45,6 @@ const encontrarEventoConMayorPorcentaje = eventos => {
     return eventoMayorPorcentaje;
 };
 
-// Llamar a la función para encontrar el evento con el porcentaje más alto
 const eventoMayorPorcentaje = encontrarEventoConMayorPorcentaje(eventosPorcentaje);
 
 insertarFilas(mayorAsistencia, `${eventoMayorPorcentaje.name} ${eventoMayorPorcentaje.porcentaje_asistencia} %`);
@@ -62,7 +61,6 @@ const encontrarEventoConMenorPorcentaje = eventos => {
     return eventoMenorPorcentaje;
 };
 
-// Llamar a la función para encontrar el evento con el porcentaje más alto
 const eventoMenorPorcentaje = encontrarEventoConMenorPorcentaje(eventosPorcentaje);
 
 insertarFilas(menorAsistencia, `${eventoMenorPorcentaje.name} ${eventoMenorPorcentaje.porcentaje_asistencia} %`);

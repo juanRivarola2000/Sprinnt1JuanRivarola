@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details-Page</title>
-    <link rel="shortcut icon" href="../Assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
-<body>
-    <header>
-        <div>
-            <img class="logo" src="../Assets/amazing_brand.png" alt="logo">
-        </div>  
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                   
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./upcomingEvents.html">Upcoming Events </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pastEvents.html">Past Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../pages/contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./stats.html">Stats</a>
-                    </li>
-                    </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Details-Page</title>
+        <link rel="shortcut icon" href="../Assets/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="../styles/style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <header>
+            <div>
+                <img class="logo" src="../Assets/amazing_brand.png" alt="logo" />
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./upcomingEvents.html">Upcoming Events </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pastEvents.html">Past Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./stats.html">Stats</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="containerMain">
+                <div class="card" style="width: 18rem">
+                    <img src="../Assets/food_fair.jpg" class="card-img-top" alt="food" />
+                    <div class="card-body">
+                        <h5 class="card-title">"Festival of the collectivities"</h5>
+                        <p class="card-text">1</p>
+                        <p class="card-text">"name": "Festival of the collectivities"</p>
+                        <p class="card-text">"date": "2022-12-12"</p>
+                        <p class="card-text">"description": "Enjoy your favorite dishes from different countries in a unique event for the whole family."</p>
+                        <p class="card-text">"category":"Food Fair"</p>
+                        <p class="card-text">"place": "Room A"</p>
+                        <p class="card-text">"capacity": 45000</p>
+                        <p class="card-text">"assistance":42756</p>
+                        <p class="card-text">"price": 5</p>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="containerMain">
-            <div class="card" style="width: 18rem;">
-                <img src="../Assets/food_fair.jpg" class="card-img-top" alt="food">
-                <div class="card-body">
-                  <h5 class="card-title">"Festival of the collectivities"</h5>
-                  <p class="card-text">1</p>
-                  <p class="card-text"> "name": "Festival of the collectivities"</p>
-                  <p class="card-text">"date": "2022-12-12"</p>
-                  <p class="card-text">"description": "Enjoy your favorite dishes from different countries in a unique event for the whole family."</p>
-                  <p class="card-text">"category":"Food Fair"</p>
-                  <p class="card-text">"place": "Room A"</p>
-                  <p class="card-text">"capacity": 45000</p>
-                  <p class="card-text"> "assistance":42756</p>
-                  <p class="card-text"> "price": 5</p>
-                </div>
-              </div>
-        </div>
-    </main>
-    <footer>
-        <nav class="navbar bg-body-tertiary">
-            <form class="container-fluid justify-content-start">
-              <button class="btn btn-outline-success me-2" type="button">SOCIAL</button>
-              <button class="btn btn-outline-success me-2" type="button">SOCIAL</button>
-              <button class="btn btn-outline-success me-2" type="button">SOCIAL</button>
-            </form>
-        </nav>     
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>    
-</body>
+        </main>
+        <footer>
+            <nav class="navbar bg-body-tertiary">
+                <form class="container-fluid justify-content-start">
+                    <button class="btn btn-outline-success me-2" type="button">SOCIAL</button>
+                    <button class="btn btn-outline-success me-2" type="button">SOCIAL</button>
+                    <button class="btn btn-outline-success me-2" type="button">SOCIAL</button>
+                </form>
+            </nav>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
